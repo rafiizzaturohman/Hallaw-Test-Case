@@ -51,8 +51,7 @@ const Layanan: React.FC = () => {
     dots: false,
     infinite: false,
     slidesToShow: 3,
-    slidesToScroll: 2,
-    initialSlide: 1,
+    slidesToScroll: 1,
     variableWidth: true,
     responsive: [
       {
