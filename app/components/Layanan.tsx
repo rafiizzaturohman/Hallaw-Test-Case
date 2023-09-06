@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import Slider from "react-slick";
+import LayananCard from "./Card/LayananCard";
 
 const dataLayanan = [
   {
@@ -43,47 +45,87 @@ const dataLayanan = [
 ];
 
 const Layanan: React.FC = () => {
-  const sliderRef = useRef(null);
+  const [indexSlick, setIndexSlick] = useState(0);
+
+  const sliderRef = useRef<Slider>(null);
 
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
+    slidesToScroll: 1,
+    initialSlide: 1,
+    afterChange: (index: number) => setIndexSlick(index),
+    responsive: [
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <section id="Layanan">
-      <div className="mx-10">
-        <div>
+      <div className="mx-6 my-6 md:mx-10">
+        <div className="space-y-6 md:space-y-16">
           <div className="flex flex-row justify-between">
             <div className="capitalize">
               <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
                 layanan
               </h4>
 
-              <h1 className="font-black text-[#BE9E6D] text-2xl md:text-4xl font-['Martel']">
+              <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
                 layanan hukum hallaw
               </h1>
             </div>
 
             <div className="flex gap-3">
               <div
-                className="bg-white shadow-xl shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
+                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
                 onClick={() => sliderRef?.current?.slickPrev()}
               >
                 <FaChevronLeft width={10} />
               </div>
 
               <div
-                className="bg-white shadow-xl shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
+                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
                 onClick={() => sliderRef?.current?.slickNext()}
               >
                 <FaChevronRight width={50} />
               </div>
             </div>
+          </div>
+
+          <div>
+            <Slider ref={sliderRef} {...settings}>
+              {dataLayanan.map((item, index) => (
+                <div key={index}>
+                  <LayananCard
+                    title={item.title}
+                    imageName={item.imageName}
+                    descriptions={item.descriptions}
+                  />
+                </div>
+              ))}
+              <div></div>
+            </Slider>
           </div>
         </div>
       </div>
