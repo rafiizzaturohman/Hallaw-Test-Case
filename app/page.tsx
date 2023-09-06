@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Tentang from "./components/Tentang";
 import Layanan from "./components/Layanan";
+import Keunggulan from "./components/Keunggulan";
+import LayananDarurat from "./components/LayananDarurat";
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       </div>
       <Tentang />
       <Layanan />
+      <Keunggulan />
+      <LayananDarurat />
     </main>
   );
 };

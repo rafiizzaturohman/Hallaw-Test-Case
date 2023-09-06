@@ -117,11 +117,7 @@ const Layanan: React.FC = () => {
             <Slider ref={sliderRef} {...settings}>
               {dataLayanan.map((item, index) => (
                 <div key={index}>
-                  <LayananCard
-                    title={item.title}
-                    imageName={item.imageName}
-                    descriptions={item.descriptions}
-                  />
+                  <LayananCard {...item} />
                 </div>
               ))}
               <div></div>
