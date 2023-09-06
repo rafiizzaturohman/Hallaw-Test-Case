@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import LayananCard from "./Card/LayananCard";
@@ -45,23 +45,22 @@ const dataLayanan = [
 ];
 
 const Layanan: React.FC = () => {
-  const [indexSlick, setIndexSlick] = useState(0);
-
   const sliderRef = useRef<Slider>(null);
 
   const settings = {
     dots: false,
     infinite: false,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     initialSlide: 1,
-    afterChange: (index: number) => setIndexSlick(index),
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 720,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false,
         },
       },
       {
@@ -69,6 +68,7 @@ const Layanan: React.FC = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
         },
       },
       {
@@ -76,6 +76,7 @@ const Layanan: React.FC = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
         },
       },
     ],
@@ -84,7 +85,7 @@ const Layanan: React.FC = () => {
   return (
     <section id="Layanan">
       <div className="mx-6 my-6 md:mx-10">
-        <div className="space-y-6 md:space-y-16">
+        <div className="space-y-3 md:space-y-6">
           <div className="flex flex-row justify-between">
             <div className="capitalize">
               <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
