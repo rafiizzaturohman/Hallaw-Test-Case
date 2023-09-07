@@ -7,6 +7,7 @@ import Layanan from "./components/Layanan";
 import Keunggulan from "./components/Keunggulan";
 import LayananDarurat from "./components/LayananDarurat";
 import Praktisi from "./components/Praktisi";
+import Testimoni from "./components/KataMereka";
 
 const Home = () => {
   return (
@@ -21,7 +22,8 @@ const Home = () => {
         <Layanan />
         <Keunggulan />
         <Praktisi />
-        {/* <LayananDarurat /> */}
+        <Testimoni />
+        <LayananDarurat />
       </div>
     </main>
   );

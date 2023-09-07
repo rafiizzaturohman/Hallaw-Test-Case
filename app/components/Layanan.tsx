@@ -99,14 +99,14 @@ const Layanan: React.FC = () => {
 
             <div className="flex gap-3">
               <div
-                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
+                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
                 onClick={() => sliderRef?.current?.slickPrev()}
               >
                 <FaChevronLeft width={10} />
               </div>
 
               <div
-                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-3 md:p-4 items-center cursor-pointer w-10 h-10 md:w-12 md:h-12"
+                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
                 onClick={() => sliderRef?.current?.slickNext()}
               >
                 <FaChevronRight width={50} />

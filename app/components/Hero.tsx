@@ -65,7 +65,9 @@ const Hero: React.FC = () => {
         <div className="container max-w-7xl">
           <Slider ref={sliderRef} {...settings}>
             {data.map((item, index) => (
-              <HeroCard key={index} {...item} />
+              <div key={index}>
+                <HeroCard {...item} />
+              </div>
             ))}
           </Slider>
         </div>
