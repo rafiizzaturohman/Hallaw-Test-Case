@@ -50,6 +50,7 @@ const Layanan: React.FC = () => {
   const settings = {
     dots: false,
     infinite: false,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: true,

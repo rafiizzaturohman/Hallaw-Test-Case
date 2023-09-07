@@ -33,3 +33,7 @@
     display: block;
   }
  }
+
+ #star svg {
+  fill: #ecc022;
+}

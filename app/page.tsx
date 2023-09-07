@@ -6,6 +6,7 @@ import Tentang from "./components/Tentang";
 import Layanan from "./components/Layanan";
 import Keunggulan from "./components/Keunggulan";
 import LayananDarurat from "./components/LayananDarurat";
+import Praktisi from "./components/Praktisi";
 
 const Home = () => {
   return (
@@ -19,8 +20,8 @@ const Home = () => {
         <Tentang />
         <Layanan />
         <Keunggulan />
-
-        <LayananDarurat />
+        <Praktisi />
+        {/* <LayananDarurat /> */}
       </div>
     </main>
   );
