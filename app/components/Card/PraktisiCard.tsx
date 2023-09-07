@@ -19,7 +19,7 @@ const PraktisiCard: React.FC<PraktisiCardProps> = ({
         <img
           src={`/images/praktisi/${image}.png`}
           alt={image}
-          className="w-6 h-6 md:w-20 md:h-20"
+          className="w-9 h-9 md:w-20 md:h-20"
         />
 
         <div className="space-y-0.5 md:space-y-1">
