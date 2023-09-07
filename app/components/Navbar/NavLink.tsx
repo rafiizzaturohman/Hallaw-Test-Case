@@ -19,7 +19,7 @@ const NavLink = () => {
       </Link>
 
       <Link
-        href={"#fiturkeunggulan"}
+        href={"#keunggulan"}
         className="capitalize w-1/2 whitespace-nowrap tracking-wide"
       >
         <h4>fitur & keunggulan</h4>

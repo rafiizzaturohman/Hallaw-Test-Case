@@ -21,6 +21,15 @@ const data = [
 const Hero: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
 
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   const SlickNextArrow = () => {
     return (
       <div>
@@ -47,25 +56,22 @@ const Hero: React.FC = () => {
     );
   };
 
-  const settings = {
-    arrows: false,
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // nextArrow: <SlickNextArrow />,
-    // prevArrow: <SlickPrevArrow />,
-  };
-
   return (
     <section id="Hero">
-      <div>
-        <Slider ref={sliderRef} {...settings}>
-          {data.map((item, index) => (
-            <HeroCard key={index} {...item} />
-          ))}
-        </Slider>
+      <div className="flex flex-row md:justify-center items-center">
+        <div className="hidden arrow-show">
+          <SlickPrevArrow />
+        </div>
+        <div className="container max-w-7xl">
+          <Slider ref={sliderRef} {...settings}>
+            {data.map((item, index) => (
+              <HeroCard key={index} {...item} />
+            ))}
+          </Slider>
+        </div>
+        <div className="hidden arrow-show">
+          <SlickNextArrow />
+        </div>
       </div>
     </section>
   );

@@ -36,7 +36,7 @@ const dataKeunggulan = [
 
 const Keunggulan: React.FC = () => {
   return (
-    <section id="Keunggulan">
+    <section id="keunggulan">
       <div className="mx-6 my-6 md:mx-10">
         <h4 className="capitalize text-[#1B2C62] text-md md:text-lg font-bold tracking-wide">
           fitur & keunggulan hallaw

@@ -15,3 +15,21 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+@media (min-width: 480px) { 
+  body {
+    background-color: rgb(248 250 252);
+  }
+ }
+
+ @media (min-width: 720px) { 
+  body {
+    background-color: rgb(243 244 246);
+  }
+ }
+
+ @media (min-width: 600px) {
+  .arrow-show {
+    display: block;
+  }
+ }

@@ -2,7 +2,7 @@ import React from "react";
 
 const Tentang: React.FC = () => {
   return (
-    <section id="Tentang">
+    <section id="tentang">
       <div className="flex justify-center my-8">
         <div className="flex flex-row gap-8 md:gap-20 items-center w-3/4">
           <div>

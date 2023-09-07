@@ -82,7 +82,7 @@ const Layanan: React.FC = () => {
   };
 
   return (
-    <section id="Layanan">
+    <section id="layanan">
       <div className="mx-6 my-6 md:mx-10">
         <div className="space-y-3 md:space-y-6">
           <div className="flex flex-row justify-between">

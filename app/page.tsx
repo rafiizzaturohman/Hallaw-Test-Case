@@ -9,17 +9,19 @@ import LayananDarurat from "./components/LayananDarurat";
 
 const Home = () => {
   return (
-    <main className="container max-w-7xl mx-auto space-y-24">
-      <div className="relative before:absolute before:top-0 before:left-0 before:bg-gradient-to-b before:from-blue-400/50 before:to-transparent before:pointer-events-none">
-        <div className="bg-cover bg-hero bg-no-repeat md:my-0">
-          <Navbar />
-          <Hero />
-        </div>
+    <main className="space-y-24">
+      <div className="bg-cover bg-hero bg-no-repeat md:my-0">
+        <Navbar />
+        <Hero />
       </div>
-      <Tentang />
-      <Layanan />
-      <Keunggulan />
-      <LayananDarurat />
+
+      <div className="container max-w-7xl mx-auto space-y-24">
+        <Tentang />
+        <Layanan />
+        <Keunggulan />
+
+        <LayananDarurat />
+      </div>
     </main>
   );
 };
