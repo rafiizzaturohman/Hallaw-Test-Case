@@ -43,7 +43,7 @@ const Praktisi: React.FC = () => {
                 />
               </div>
 
-              <div className="absolute flex flex-row gap-4 md:gap-44 top-5 md:-top-4 items-center px-3 py-2 md:px-28">
+              <div className="absolute flex flex-row gap-4 md:gap-48 top-5 md:-top-4 items-center px-3 py-2 md:px-44">
                 <div>
                   {dataPraktisi.map((item, index) => (
                     <div
@@ -57,7 +57,7 @@ const Praktisi: React.FC = () => {
                           className="w-6 h-6 md:w-20 md:h-20"
                         />
 
-                        <div className="md:space-y-0.5">
+                        <div className="space-y-0.5 md:space-y-1">
                           <h4 className="capitalize font-semibold text-sm md:text-base">
                             {item.name}
                           </h4>
@@ -65,7 +65,7 @@ const Praktisi: React.FC = () => {
                             {item.job}
                           </p>
 
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-1 md:gap-2 items-center">
                             <div id="star">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const Praktisi: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="space-y-1 md:space-y-5">
+                <div className="space-y-1 md:space-y-5 md:w-1/2">
                   <h4 className="text-[#A5ACBE] text-2xl md:text-6xl font-bold">
                     +324
                   </h4>
