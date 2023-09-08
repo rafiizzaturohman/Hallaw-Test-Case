@@ -8,6 +8,7 @@ import Keunggulan from "./components/Keunggulan";
 import LayananDarurat from "./components/LayananDarurat";
 import Praktisi from "./components/Praktisi";
 import Testimoni from "./components/KataMereka";
+import Event from "./components/Event";
 
 const Home = () => {
   return (
@@ -16,13 +17,13 @@ const Home = () => {
         <Navbar />
         <Hero />
       </div>
-
       <div className="container max-w-7xl mx-auto space-y-24">
         <Tentang />
         <Layanan />
         <Keunggulan />
         <Praktisi />
         <Testimoni />
+        <Event />
         <LayananDarurat />
       </div>
     </main>
