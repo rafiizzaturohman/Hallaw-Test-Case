@@ -47,6 +47,22 @@ const dataLayanan = [
 const Layanan: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
 
+  const SlickNextArrow = () => {
+    return (
+      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
+        <FaChevronRight width={50} />
+      </div>
+    );
+  };
+
+  const SlickPrevArrow = () => {
+    return (
+      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
+        <FaChevronLeft width={10} />
+      </div>
+    );
+  };
+
   const settings = {
     dots: false,
     infinite: false,
@@ -98,19 +114,9 @@ const Layanan: React.FC = () => {
             </div>
 
             <div className="flex gap-3">
-              <div
-                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
-                onClick={() => sliderRef?.current?.slickPrev()}
-              >
-                <FaChevronLeft width={10} />
-              </div>
+              <SlickPrevArrow />
 
-              <div
-                className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
-                onClick={() => sliderRef?.current?.slickNext()}
-              >
-                <FaChevronRight width={50} />
-              </div>
+              <SlickNextArrow />
             </div>
           </div>
 

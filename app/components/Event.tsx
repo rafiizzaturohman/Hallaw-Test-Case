@@ -8,24 +8,28 @@ const eventData = [
     date: "16 Sep 2022",
     place: "Bandung",
     imageName: "1",
+    about: "Narkoba",
   },
   {
     title: "Kasus Cyber Crime yang Semakin Meningkat dengan Adanya Hacker B...",
     date: "16 Sep 2022",
     place: "Bandung",
     imageName: "1",
-  },
-  {
-    title: "Kasus Cyber Crime yang Semakin Meningkat dengan Adanya Hacker B...",
-    date: "16 Sep 2022",
-    place: "Bandung",
-    imageName: "1",
+    about: "Cyber Crime",
   },
   {
     title: "Pengaruh Teroris Dalam Dunia Politik Indonesia dan Amerika",
     date: "16 Sep 2022",
     place: "Bandung",
     imageName: "1",
+    about: "Teroris",
+  },
+  {
+    title: "Kasus Perceraian meningkat setelah post pandemi",
+    date: "16 Sep 2022",
+    place: "Bandung",
+    imageName: "1",
+    about: "Teroris",
   },
 ];
 
@@ -59,7 +63,7 @@ const Event: React.FC = () => {
 
   return (
     <section id="event">
-      <div className="mx-6 my-6 md:mx-10">
+      <div className="mx-6 my-4 md:mx-10">
         <div className="space-y-3 md:space-y-6">
           <div className="flex flex-row justify-between">
             <div className="capitalize">
@@ -76,6 +80,10 @@ const Event: React.FC = () => {
 
               <SlickNextArrow />
             </div>
+          </div>
+
+          <div>
+            <Slider></Slider>
           </div>
         </div>
       </div>
