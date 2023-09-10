@@ -8,7 +8,7 @@ interface KontakCardProps {
 const KontakCard: React.FC<KontakCardProps> = ({ name, phone }) => {
   return (
     <div className="container md:my-1 p-2 md:px-5 md:py-2">
-      <div className="border border-gray-[#E5E9F6] rounded-2xl p-2 md:p-6">
+      <div className="border border-gray-[#E5E9F6] rounded-2xl p-3 md:p-6">
         <div className="flex flex-row gap-3 items-center">
           <img
             src="/icons/call.png"
