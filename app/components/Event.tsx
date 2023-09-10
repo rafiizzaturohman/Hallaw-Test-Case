@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Slider from "react-slick";
+import EventCard from "./Card/EventCard";
 
 const dataEvent = [
   {
@@ -17,7 +18,7 @@ const dataEvent = [
       "Kasus Cyber Crime yang Semakin Meningkat dengan Adanya Hacker Bjorka",
     date: "16 Sep 2022",
     place: "Bandung",
-    imageName: "2",
+    imageName: "1",
     about: "Cyber Crime",
   },
   {
@@ -31,8 +32,8 @@ const dataEvent = [
     title: "Kasus Perceraian meningkat setelah post pandemi",
     date: "16 Sep 2022",
     place: "Bandung",
-    imageName: "2",
-    about: "Teroris",
+    imageName: "1",
+    about: "Perceraian",
   },
 ];
 
@@ -72,7 +73,7 @@ const Event: React.FC = () => {
       {
         breakpoint: 720,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
         },
@@ -80,7 +81,7 @@ const Event: React.FC = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
         },
@@ -88,7 +89,7 @@ const Event: React.FC = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
         },
@@ -120,15 +121,8 @@ const Event: React.FC = () => {
           <div>
             <Slider ref={sliderRef} {...settings}>
               {dataEvent.map((item, index) => (
-                <div>
-                  <div>
-                    <img
-                      src={`/images/event/${item.imageName}.svg`}
-                      alt={item.imageName}
-                    />
-                  </div>
-
-                  <div></div>
+                <div key={index}>
+                  <EventCard {...item} />
                 </div>
               ))}
             </Slider>
