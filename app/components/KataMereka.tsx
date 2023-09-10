@@ -83,7 +83,7 @@ const Testimoni: React.FC = () => {
 
           <div className="container md:w-3/4">
             <div className="relative flex flex-row items-center md:space-x-1.5 max-w-7xl">
-              <div className="absolute z-10 -left-3">
+              <div className="absolute z-10 -left-3 md:-left-3">
                 <SlickPrevArrow />
               </div>
               <div className="container">
@@ -95,7 +95,7 @@ const Testimoni: React.FC = () => {
                   ))}
                 </Slider>
               </div>
-              <div className="absolute -right-3">
+              <div className="absolute -right-3 md:-right-5">
                 <SlickNextArrow />
               </div>
             </div>
