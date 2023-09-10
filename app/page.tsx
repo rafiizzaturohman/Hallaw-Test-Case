@@ -10,6 +10,7 @@ import Praktisi from "./components/Praktisi";
 import Testimoni from "./components/KataMereka";
 import Event from "./components/Event";
 import Kontak from "./components/Kontak";
+import Berita from "./components/Berita";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <Testimoni />
         <Event />
         <Kontak />
+        <Berita />
         <LayananDarurat />
       </div>
     </main>

@@ -29,7 +29,7 @@
  }
 
  @media (min-width: 600px) {
-  .arrow-show {
+  .show {
     display: block;
   }
  }

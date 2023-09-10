@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import EventCard from "./Card/EventCard";
 
@@ -42,22 +42,26 @@ const Event: React.FC = () => {
 
   const SlickNextArrow = () => {
     return (
-      <div
-        className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
-        onClick={() => sliderRef?.current?.slickNext()}
-      >
-        <FaChevronRight width={50} />
+      <div>
+        <div
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
+          onClick={() => sliderRef?.current?.slickNext()}
+        >
+          <FaAngleRight />
+        </div>
       </div>
     );
   };
 
   const SlickPrevArrow = () => {
     return (
-      <div
-        className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
-        onClick={() => sliderRef?.current?.slickPrev()}
-      >
-        <FaChevronLeft width={10} />
+      <div>
+        <div
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
+          onClick={() => sliderRef?.current?.slickPrev()}
+        >
+          <FaAngleLeft />
+        </div>
       </div>
     );
   };
@@ -104,10 +108,10 @@ const Event: React.FC = () => {
           <div className="flex flex-row justify-between">
             <div className="capitalize">
               <h4 className="font-bold tracking-wide text-[#1B2C62] text-md md:text-xl">
-                praktisi hallaw
+                Event
               </h4>
               <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
-                praktisi hukum professional
+                bedah kasus bersama hallaw
               </h1>
             </div>
 

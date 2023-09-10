@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import LayananCard from "./Card/LayananCard";
 
@@ -49,16 +49,26 @@ const Layanan: React.FC = () => {
 
   const SlickNextArrow = () => {
     return (
-      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
-        <FaChevronRight width={50} />
+      <div>
+        <div
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
+          onClick={() => sliderRef?.current?.slickNext()}
+        >
+          <FaAngleRight />
+        </div>
       </div>
     );
   };
 
   const SlickPrevArrow = () => {
     return (
-      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
-        <FaChevronLeft width={10} />
+      <div>
+        <div
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
+          onClick={() => sliderRef?.current?.slickPrev()}
+        >
+          <FaAngleLeft />
+        </div>
       </div>
     );
   };

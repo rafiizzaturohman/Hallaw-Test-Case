@@ -45,7 +45,7 @@ const Testimoni: React.FC = () => {
     return (
       <div>
         <div
-          className="bg-white/50 text-black rounded-full p-3 w-10 cursor-pointer"
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
           onClick={() => sliderRef?.current?.slickNext()}
         >
           <FaAngleRight />
@@ -58,7 +58,7 @@ const Testimoni: React.FC = () => {
     return (
       <div>
         <div
-          className="bg-white/50 text-black rounded-full p-2 w-8 md:p-3 md:w-10 cursor-pointer"
+          className="bg-white shadow-md hover:bg-gray-100 text-black rounded-full p-3 w-10 cursor-pointer"
           onClick={() => sliderRef?.current?.slickPrev()}
         >
           <FaAngleLeft />
@@ -66,6 +66,7 @@ const Testimoni: React.FC = () => {
       </div>
     );
   };
+
   return (
     <section id="testimoni">
       <div className="mx-6 my-6 md:ml-10 md:mr-20">
@@ -81,8 +82,8 @@ const Testimoni: React.FC = () => {
           </div>
 
           <div className="container md:w-3/4">
-            <div className="flex flex-row items-center md:space-x-1.5 max-w-7xl">
-              <div className="hidden arrow-show">
+            <div className="relative flex flex-row items-center md:space-x-1.5 max-w-7xl">
+              <div className="absolute z-10 -left-3">
                 <SlickPrevArrow />
               </div>
               <div className="container">
@@ -94,7 +95,7 @@ const Testimoni: React.FC = () => {
                   ))}
                 </Slider>
               </div>
-              <div className="hidden arrow-show">
+              <div className="absolute -right-3">
                 <SlickNextArrow />
               </div>
             </div>

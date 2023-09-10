@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
   return (
     <section id="Hero">
       <div className="flex flex-row md:justify-center items-center">
-        <div className="hidden arrow-show">
+        <div className="hidden show">
           <SlickPrevArrow />
         </div>
         <div className="container max-w-7xl">
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
             ))}
           </Slider>
         </div>
-        <div className="hidden arrow-show">
+        <div className="hidden show">
           <SlickNextArrow />
         </div>
       </div>
