@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Slider from "react-slick";
 
-const eventData = [
+const dataEvent = [
   {
     title: "Fenomena Obat-Obatan Terlarang di Kalangan Milenial",
     date: "16 Sep 2022",
@@ -11,10 +13,11 @@ const eventData = [
     about: "Narkoba",
   },
   {
-    title: "Kasus Cyber Crime yang Semakin Meningkat dengan Adanya Hacker B...",
+    title:
+      "Kasus Cyber Crime yang Semakin Meningkat dengan Adanya Hacker Bjorka",
     date: "16 Sep 2022",
     place: "Bandung",
-    imageName: "1",
+    imageName: "2",
     about: "Cyber Crime",
   },
   {
@@ -28,17 +31,20 @@ const eventData = [
     title: "Kasus Perceraian meningkat setelah post pandemi",
     date: "16 Sep 2022",
     place: "Bandung",
-    imageName: "1",
+    imageName: "2",
     about: "Teroris",
   },
 ];
 
 const Event: React.FC = () => {
-  //   const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<Slider>(null);
 
   const SlickNextArrow = () => {
     return (
-      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
+      <div
+        className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
+        onClick={() => sliderRef?.current?.slickNext()}
+      >
         <FaChevronRight width={50} />
       </div>
     );
@@ -46,7 +52,10 @@ const Event: React.FC = () => {
 
   const SlickPrevArrow = () => {
     return (
-      <div className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12">
+      <div
+        className="bg-white shadow-xl hover:bg-slate-100 shadow-gray-300 rounded-full p-2 md:p-4 items-center cursor-pointer w-8 h-8 md:w-12 md:h-12"
+        onClick={() => sliderRef?.current?.slickPrev()}
+      >
         <FaChevronLeft width={10} />
       </div>
     );
@@ -55,10 +64,36 @@ const Event: React.FC = () => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
     arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+        },
+      },
+    ],
   };
 
   return (
@@ -83,15 +118,25 @@ const Event: React.FC = () => {
           </div>
 
           <div>
-            <Slider></Slider>
+            <Slider ref={sliderRef} {...settings}>
+              {dataEvent.map((item, index) => (
+                <div>
+                  <div>
+                    <img
+                      src={`/images/event/${item.imageName}.svg`}
+                      alt={item.imageName}
+                    />
+                  </div>
+
+                  <div></div>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-// onClick={() => sliderRef?.current?.slickPrev()}
-// onClick={() => sliderRef?.current?.slickNext()}
 
 export default Event;
