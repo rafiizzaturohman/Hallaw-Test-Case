@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
     return (
       <div>
         <div
-          className="bg-white/50 text-black rounded-full p-3 w-10 cursor-pointer"
+          className="bg-white/50 hover:bg-white/75 text-black rounded-full p-3 w-10 cursor-pointer"
           onClick={() => sliderRef?.current?.slickNext()}
         >
           <FaAngleRight />
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
     return (
       <div>
         <div
-          className="bg-white/50 text-black rounded-full p-2 w-8 md:p-3 md:w-10 cursor-pointer"
+          className="bg-white/50 hover:bg-white/75 text-black rounded-full p-2 w-8 md:p-3 md:w-10 cursor-pointer"
           onClick={() => sliderRef?.current?.slickPrev()}
         >
           <FaAngleLeft />
