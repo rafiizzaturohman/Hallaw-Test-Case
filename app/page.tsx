@@ -32,6 +32,7 @@ const Home = () => {
         <Kontak />
         <Berita />
         <Download />
+      
         <LayananDarurat />
       </div>
     </main>

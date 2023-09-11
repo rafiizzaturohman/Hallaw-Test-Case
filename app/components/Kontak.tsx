@@ -163,7 +163,7 @@ const Kontak: React.FC = () => {
                 <div>
                   <Link
                     href={"#"}
-                    className="text-xs md:text-lg bg-[#1B2C62] text-white rounded-full px-3 py-2 md:px-9 md:py-4"
+                    className="text-[10px] font-semibold md:font-normal md:text-lg bg-[#1B2C62] text-white rounded-full px-3 py-2 md:px-9 md:py-4"
                   >
                     lihat selengkapnya
                   </Link>
