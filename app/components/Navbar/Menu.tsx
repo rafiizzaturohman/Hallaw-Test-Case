@@ -30,7 +30,7 @@ const Menu: React.FC = () => {
             <MenuItem label="Layanan" id={"#layanan"} onClick={toggleOpen} />
             <MenuItem
               label="Fitur & Keunggulan"
-              id={"#fiturkeunggulan"}
+              id={"#keunggulan"}
               onClick={toggleOpen}
             />
             <MenuItem

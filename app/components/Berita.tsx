@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Slider from "react-slick";
+import BeritaCard from "./Card/BeritaCard";
 
 const dataBerita = [
   {
@@ -116,11 +117,7 @@ const Berita: React.FC = () => {
             <Slider ref={sliderRef} {...settings}>
               {dataBerita.map((item, index) => (
                 <div key={index}>
-                  <div
-                    className={index % 2 === 1 ? "bg-[#F1F3FA]" : "bg-white"}
-                  >
-                    <div></div>
-                  </div>
+                  <BeritaCard {...item} no={index} />
                 </div>
               ))}
             </Slider>
