@@ -19,6 +19,9 @@ import LayananDarurat from "./components/LayananDarurat";
 const Home = () => {
   return (
     <main className="space-y-24">
+      <head>
+        <link rel="icon" href="/icons/HallawIcon.png" />
+      </head>
       <div className="bg-cover bg-hero bg-no-repeat md:my-0">
         <Navbar />
         <Hero />
