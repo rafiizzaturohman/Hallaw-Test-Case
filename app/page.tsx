@@ -14,6 +14,7 @@ import Berita from "./components/Berita";
 import Download from "./components/DownloadUs";
 
 import LayananDarurat from "./components/LayananDarurat";
+import Footer from "./components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
         <Kontak />
         <Berita />
         <Download />
-      
+        <Footer />
         <LayananDarurat />
       </div>
     </main>
