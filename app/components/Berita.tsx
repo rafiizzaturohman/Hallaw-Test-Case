@@ -26,6 +26,11 @@ const dataBerita = [
     date: "18 November 2022",
     imageName: "2",
   },
+  {
+    title: "Hak Pasien Atas Isi Rekam Medis yang Terjadi Pada...",
+    date: "18 November 2022",
+    imageName: "2",
+  },
 ];
 
 const Berita: React.FC = () => {
@@ -61,32 +66,24 @@ const Berita: React.FC = () => {
     dots: false,
     infinite: false,
     arrows: false,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    variableWidth: true,
+    variableWidth: false,
     responsive: [
       {
-        breakpoint: 720,
+        breakpoint: 1080,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          variableWidth: true,
+          variableWidth: false,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
+          variableWidth: false,
         },
       },
     ],
@@ -94,33 +91,35 @@ const Berita: React.FC = () => {
 
   return (
     <section id="berita">
-      <div className="mx-6 my-4 md:mx-10">
-        <div className="space-y-3 md:space-y-6">
-          <div className="flex flex-row justify-between">
+      <div className="container max-w-7xl mx-auto">
+        <div className="mx-6 my-4 md:mx-10">
+          <div className="space-y-3 md:space-y-6">
+            <div className="flex flex-row justify-between">
+              <div>
+                <h4 className="capitalize font-bold tracking-wide text-[#1B2C62] text-md md:text-xl">
+                  berita
+                </h4>
+                <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
+                  Berita Terbaru dari Hallaw
+                </h1>
+              </div>
+
+              <div className="flex gap-3">
+                <SlickPrevArrow />
+
+                <SlickNextArrow />
+              </div>
+            </div>
+
             <div>
-              <h4 className="capitalize font-bold tracking-wide text-[#1B2C62] text-md md:text-xl">
-                berita
-              </h4>
-              <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
-                Berita Terbaru dari Hallaw
-              </h1>
+              <Slider ref={sliderRef} {...settings}>
+                {dataBerita.map((item, index) => (
+                  <div key={index}>
+                    <BeritaCard {...item} no={index} />
+                  </div>
+                ))}
+              </Slider>
             </div>
-
-            <div className="flex gap-3">
-              <SlickPrevArrow />
-
-              <SlickNextArrow />
-            </div>
-          </div>
-
-          <div>
-            <Slider ref={sliderRef} {...settings}>
-              {dataBerita.map((item, index) => (
-                <div key={index}>
-                  <BeritaCard {...item} no={index} />
-                </div>
-              ))}
-            </Slider>
           </div>
         </div>
       </div>

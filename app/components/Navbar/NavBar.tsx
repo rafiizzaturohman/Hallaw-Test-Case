@@ -6,10 +6,10 @@ import NavLink from "./NavLink";
 const Navbar = () => {
   return (
     <section id="navbar">
-      <div className="container mx-auto">
+      <div className="container max-w-7xl mx-auto">
         <div className="w-full">
-          <div className="flex flex-row justify-start items-center p-4 md:mx-16">
-            <div className="w-full md:w-1/2 flex flex-row items-center p-5">
+          <div className="flex flex-row justify-start items-center p-8 box-border">
+            <div className="w-full md:w-2/6 flex flex-row justify-start items-center">
               <img src="/icons/HallawIcons.png" alt="Hallaw" />
             </div>
 

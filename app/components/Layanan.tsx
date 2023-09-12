@@ -79,26 +79,18 @@ const Layanan: React.FC = () => {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    variableWidth: true,
+    variableWidth: false,
     responsive: [
       {
-        breakpoint: 720,
+        breakpoint: 1080,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: false,
         },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          variableWidth: false,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -110,35 +102,36 @@ const Layanan: React.FC = () => {
 
   return (
     <section id="layanan">
-      <div className="mx-6 my-6 md:mx-10">
-        <div className="space-y-3 md:space-y-6">
-          <div className="flex flex-row justify-between">
-            <div className="capitalize">
-              <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
-                layanan
-              </h4>
+      <div className="container max-w-7xl mx-auto">
+        <div className="mx-6 my-6 md:mx-10">
+          <div className="space-y-3 md:space-y-6">
+            <div className="flex flex-row justify-between">
+              <div className="capitalize">
+                <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
+                  layanan
+                </h4>
 
-              <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
-                layanan hukum hallaw
-              </h1>
+                <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
+                  layanan hukum hallaw
+                </h1>
+              </div>
+
+              <div className="flex gap-3">
+                <SlickPrevArrow />
+
+                <SlickNextArrow />
+              </div>
             </div>
 
-            <div className="flex gap-3">
-              <SlickPrevArrow />
-
-              <SlickNextArrow />
+            <div>
+              <Slider ref={sliderRef} {...settings}>
+                {dataLayanan.map((item, index) => (
+                  <div key={index}>
+                    <LayananCard {...item} />
+                  </div>
+                ))}
+              </Slider>
             </div>
-          </div>
-
-          <div>
-            <Slider ref={sliderRef} {...settings}>
-              {dataLayanan.map((item, index) => (
-                <div key={index}>
-                  <LayananCard {...item} />
-                </div>
-              ))}
-              <div></div>
-            </Slider>
           </div>
         </div>
       </div>

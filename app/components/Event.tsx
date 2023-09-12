@@ -70,16 +70,16 @@ const Event: React.FC = () => {
     dots: false,
     infinite: false,
     arrows: false,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    variableWidth: true,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 720,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          variableWidth: true,
+          variableWidth: false,
         },
       },
       {
@@ -87,7 +87,7 @@ const Event: React.FC = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          variableWidth: true,
+          variableWidth: false,
         },
       },
       {
@@ -95,7 +95,7 @@ const Event: React.FC = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          variableWidth: true,
+          variableWidth: false,
         },
       },
     ],
@@ -103,33 +103,35 @@ const Event: React.FC = () => {
 
   return (
     <section id="event">
-      <div className="mx-6 my-4 md:mx-10">
-        <div className="space-y-3 md:space-y-6">
-          <div className="flex flex-row justify-between">
-            <div className="capitalize">
-              <h4 className="font-bold tracking-wide text-[#1B2C62] text-md md:text-xl">
-                Event
-              </h4>
-              <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
-                bedah kasus bersama hallaw
-              </h1>
+      <div className="container max-w-7xl mx-auto">
+        <div className="mx-6 my-4 md:mx-10">
+          <div className="space-y-3 md:space-y-6">
+            <div className="flex flex-row justify-between">
+              <div className="capitalize">
+                <h4 className="font-bold tracking-wide text-[#1B2C62] text-md md:text-xl">
+                  Event
+                </h4>
+                <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
+                  bedah kasus bersama hallaw
+                </h1>
+              </div>
+
+              <div className="flex gap-3">
+                <SlickPrevArrow />
+
+                <SlickNextArrow />
+              </div>
             </div>
 
-            <div className="flex gap-3">
-              <SlickPrevArrow />
-
-              <SlickNextArrow />
+            <div>
+              <Slider ref={sliderRef} {...settings}>
+                {dataEvent.map((item, index) => (
+                  <div key={index}>
+                    <EventCard {...item} />
+                  </div>
+                ))}
+              </Slider>
             </div>
-          </div>
-
-          <div>
-            <Slider ref={sliderRef} {...settings}>
-              {dataEvent.map((item, index) => (
-                <div key={index}>
-                  <EventCard {...item} />
-                </div>
-              ))}
-            </Slider>
           </div>
         </div>
       </div>

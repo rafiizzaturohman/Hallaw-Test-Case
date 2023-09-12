@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import HeroCard from "./Card/HeroCard";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import Navbar from "./Navbar/NavBar";
 
 const data = [
   {
@@ -58,21 +59,26 @@ const Hero: React.FC = () => {
 
   return (
     <section id="Hero">
-      <div className="flex flex-row md:justify-center items-center">
-        <div className="hidden show">
-          <SlickPrevArrow />
-        </div>
-        <div className="container max-w-7xl">
-          <Slider ref={sliderRef} {...settings}>
-            {data.map((item, index) => (
-              <div key={index}>
-                <HeroCard {...item} />
-              </div>
-            ))}
-          </Slider>
-        </div>
-        <div className="hidden show">
-          <SlickNextArrow />
+      <div className="bg-cover bg-hero bg-no-repeat">
+        <div className="container max-w-7xl mx-auto">
+          <Navbar />
+          <div className="flex flex-row md:justify-center items-center">
+            <div className="hidden md:block">
+              <SlickPrevArrow />
+            </div>
+            <div className="container max-w-6xl">
+              <Slider ref={sliderRef} {...settings}>
+                {data.map((item, index) => (
+                  <div key={index}>
+                    <HeroCard {...item} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+            <div className="hidden md:block">
+              <SlickNextArrow />
+            </div>
+          </div>
         </div>
       </div>
     </section>

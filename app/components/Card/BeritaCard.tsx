@@ -18,8 +18,8 @@ const BeritaCard: React.FC<BeritaCardProps> = ({
       <div
         className={
           no % 2 === 1
-            ? "bg-white shadow-md rounded-2xl md:rounded-3xl p-3 md:p-5 mr-3 w-[194px] h-[287px] md:w-[334px] md:h-[467px]"
-            : "bg-[#F1F3FA] shadow-md rounded-2xl md:rounded-3xl p-3 md:p-5 mr-3 w-[194px] h-[287px] md:w-[334px] md:h-[467px]"
+            ? "bg-white shadow-md rounded-2xl md:rounded-3xl p-3 md:p-5 mr-3"
+            : "bg-[#F1F3FA] shadow-md rounded-2xl md:rounded-3xl p-3 md:p-5 mr-3"
         }
       >
         <div className="space-y-4 md:space-y-7">
@@ -27,7 +27,7 @@ const BeritaCard: React.FC<BeritaCardProps> = ({
             <img
               src={`/images/berita/${imageName}.png`}
               alt={imageName}
-              className="w-40 md:w-[294px] md:h-[294px]"
+              className=""
             />
           </div>
 
@@ -35,9 +35,7 @@ const BeritaCard: React.FC<BeritaCardProps> = ({
             <p className="text-[#636772] font-normal text-sm md:text-lg">
               {date}
             </p>
-            <p className="w-40 md:w-[284px] font-semibold text-sm md:text-xl">
-              {title}
-            </p>
+            <p className="font-semibold text-sm md:text-xl">{title}</p>
           </div>
         </div>
       </div>

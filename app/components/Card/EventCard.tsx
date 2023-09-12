@@ -16,13 +16,13 @@ const EventCard: React.FC<EventCardProps> = ({
   place,
 }) => {
   return (
-    <div className="container md:my-4 md:mx-2 p-2 md:px-0.5 md:py-1">
-      <div className="w-40 md:w-[417px] space-y-1 md:space-y-8">
+    <div className="p-2">
+      <div className="space-y-1 md:space-y-6">
         <div className="relative">
           <img
             src={`/images/event/${imageName}.png`}
             alt={imageName}
-            className="w-48 md:w-[417px] md:h-[304px] rounded-xl"
+            className=""
           />
 
           <div className="capitalize absolute bottom-2 left-2 md:bottom-4 md:left-4">

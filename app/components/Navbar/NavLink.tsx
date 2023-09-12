@@ -3,7 +3,7 @@ import React from "react";
 
 const NavLink = () => {
   return (
-    <div className="flex flex-row justify-start items-center gap-4 w-2/3 text-lg text-white font-normal">
+    <div className="flex flex-row justify-start items-center gap-4 w-2/3 text-base md:text-lg text-white">
       <Link
         href={"#"}
         className="capitalize w-1/2 whitespace-nowrap tracking-wide hover:text-gray-200 hover:font-semibold"

@@ -28,7 +28,7 @@
   }
  }
 
- @media (min-width: 600px) {
+ @media (min-width: 1080px) {
   .show {
     display: block;
   }

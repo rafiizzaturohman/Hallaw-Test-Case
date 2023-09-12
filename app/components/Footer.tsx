@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
   return (
     <section id="footer">
       <div className="bg-gradient-to-b from-[#FAFBFD] to-[#F1F3FA] shadow-2xl">
-        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row justify-evenly p-7 md:py-20">
-          <div className="flex flex-row justify-evenly md:gap-28">
+        <div className="flex flex-col gap-8 lg:space-y-0 md:flex-row md:justify-evenly p-7 md:py-20">
+          <div className="flex flex-row justify-evenly md:gap-20">
             <ProfileKantor />
             <Menu />
           </div>
 
-          <div className="flex flex-row justify-evenly md:gap-28">
+          <div className="flex flex-row justify-evenly md:gap-20">
             <Kontak />
             <DownloadUs />
           </div>

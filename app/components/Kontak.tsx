@@ -145,33 +145,31 @@ const Kontak: React.FC = () => {
 
   return (
     <section id="kontak">
-      <div>
+      <div className="container max-w-7xl mx-auto">
         <div className="mx-6 my-6 md:mx-10">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
-            <div className="">
-              <div className="flex flex-row justify-between md:flex-col space-y-4 md:space-y-8 capitalize">
-                <div className="">
-                  <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
-                    kontak
-                  </h4>
+          <div className="flex flex-col base:flex-row base:justify-between base:items-center space-y-4 md:space-y-0">
+            <div className="flex flex-row justify-between base:flex-col space-y-4 base:space-y-8 capitalize">
+              <div>
+                <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
+                  kontak
+                </h4>
 
-                  <h1 className="font-black text-[#BE9E6D] text-xl md:text-[38px] md:leading-[52px] md:w-[284px] font-['Martel']">
-                    kontak badan hukum lainnya
-                  </h1>
-                </div>
+                <h1 className="font-black text-[#BE9E6D] text-xl md:text-[38px] md:leading-[52px] md:w-[284px] font-['Martel']">
+                  kontak badan hukum lainnya
+                </h1>
+              </div>
 
-                <div>
-                  <Link
-                    href={"#"}
-                    className="text-[10px] font-semibold md:font-normal md:text-lg bg-[#1B2C62] text-white rounded-full px-3 py-2 md:px-9 md:py-4"
-                  >
-                    lihat selengkapnya
-                  </Link>
-                </div>
+              <div>
+                <Link
+                  href={"#"}
+                  className="text-[10px] whitespace-nowrap font-semibold md:font-normal md:text-lg bg-[#1B2C62] text-white rounded-full px-3 py-2 md:px-9 md:py-4"
+                >
+                  lihat selengkapnya
+                </Link>
               </div>
             </div>
-
-            <div className="relative flex flex-row max-w-7xl bg-white shadow-md rounded-3xl p-3 md:w-[698px] md:h-[310px] items-center">
+            {/* base:w-3/4 */}
+            <div className="relative flex flex-row justify-center max-w-7xl bg-white shadow-md rounded-3xl p-3 w-full base:w-3/4 md:w-[698px] lg:h-[318px] items-center">
               <div className="absolute -left-5 md:-left-5">
                 <SlickPrevArrow />
               </div>

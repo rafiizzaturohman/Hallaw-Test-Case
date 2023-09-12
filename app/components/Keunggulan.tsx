@@ -37,33 +37,35 @@ const dataKeunggulan = [
 const Keunggulan: React.FC = () => {
   return (
     <section id="keunggulan">
-      <div className="mx-6 my-6 md:mx-10">
-        <h4 className="capitalize text-[#1B2C62] text-md md:text-lg font-bold tracking-wide">
-          fitur & keunggulan hallaw
-        </h4>
-        <div className="md:grid md:grid-cols-2 items-center">
-          <div className="space-y-7">
-            <div className="capitalize">
-              <h1 className="font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel'] md:w-1/2">
-                kenapa harus aplikasi hallaw
-              </h1>
+      <div className="container max-w-7xl mx-auto">
+        <div className="mx-6 my-6 sm:mx-10">
+          <h4 className="capitalize text-[#1B2C62] text-sm sm:text-lg font-bold tracking-wide">
+            fitur & keunggulan hallaw
+          </h4>
+          <div className="sm:grid sm:grid-cols-2 items-center">
+            <div className="space-y-7">
+              <div className="capitalize">
+                <h1 className="font-black text-[#BE9E6D] text-xl sm:text-4xl font-['Martel'] sm:w-1/2">
+                  kenapa harus aplikasi hallaw
+                </h1>
+              </div>
+
+              <img
+                src="/icons/mascot/mascot.png"
+                alt="Mascot"
+                className="w-[237px] h-[279px] sm:w-[417px] sm:h-[479px]"
+              />
             </div>
 
-            <img
-              src="/icons/mascot/mascot.png"
-              alt="Mascot"
-              className="w-[237px] h-[279px] md:w-[417px] md:h-[479px]"
-            />
-          </div>
-
-          <div className="space-y-2 md:space-y-5">
-            {dataKeunggulan.map((item, index) => {
-              return (
-                <div key={index}>
-                  <KeunggulanCard {...item} />
-                </div>
-              );
-            })}
+            <div className="space-y-2 sm:space-y-5">
+              {dataKeunggulan.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <KeunggulanCard {...item} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

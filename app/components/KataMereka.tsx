@@ -69,34 +69,36 @@ const Testimoni: React.FC = () => {
 
   return (
     <section id="testimoni">
-      <div className="mx-6 my-6 md:ml-10 md:mr-20">
-        <div className="md:flex md:flex-row md:items-center md:gap-2">
-          <div className="md:space-y-3">
-            <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
-              Testimoni
-            </h4>
+      <div className="container max-w-7xl mx-auto">
+        <div className="mx-6 my-6 md:ml-10 md:mr-20">
+          <div className="base:flex base:flex-row base:items-center base:gap-2 base:justify-between">
+            <div className="md:space-y-3">
+              <h4 className="font-bold text-[#1B2C62] text-md md:text-xl">
+                Testimoni
+              </h4>
 
-            <h1 className="capitalize font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel']">
-              apa kata mereka tentang hallaw
-            </h1>
-          </div>
+              <h1 className="capitalize font-black text-[#BE9E6D] text-xl md:text-4xl font-['Martel'] md:w-[179px]">
+                apa kata mereka tentang hallaw
+              </h1>
+            </div>
 
-          <div className="container md:w-3/4">
-            <div className="relative flex flex-row items-center md:space-x-1.5 max-w-7xl">
-              <div className="absolute z-10 -left-3 md:-left-3">
-                <SlickPrevArrow />
-              </div>
-              <div className="container">
-                <Slider ref={sliderRef} {...settings}>
-                  {dataTestimoni.map((item, index) => (
-                    <div key={index}>
-                      <TestimoniCard {...item} />
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-              <div className="absolute -right-3 md:-right-5">
-                <SlickNextArrow />
+            <div className="container base:w-3/4">
+              <div className="relative flex flex-row items-center base:space-x-1.5 max-w-7xl">
+                <div className="absolute z-10 -left-3 base:-left-0">
+                  <SlickPrevArrow />
+                </div>
+                <div className="container">
+                  <Slider ref={sliderRef} {...settings}>
+                    {dataTestimoni.map((item, index) => (
+                      <div key={index}>
+                        <TestimoniCard {...item} />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+                <div className="absolute -right-3 md:-right-5">
+                  <SlickNextArrow />
+                </div>
               </div>
             </div>
           </div>

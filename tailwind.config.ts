@@ -15,6 +15,13 @@ const config: Config = {
         'hero': "url('../public/bg.png')"
       },
     },
+    screens: {
+      'sm': '640px',
+      'base': '800px',
+      'md': '1160px',
+      'lg': '1280px',
+      'xl': '1440px',
+    }
   },
   plugins: [],
 }
