@@ -14,7 +14,7 @@ const DownloadAppStore: React.FC = () => {
       />
 
       <div className="text-white md:-space-y-1">
-        <p className="text-[8px] md:text-xs whitespace-nowrap">
+        <p className="text-[9px] md:text-xs whitespace-nowrap">
           Download on the
         </p>
         <h4 className="capitalize font-bold text-sm md:text-xl">app store</h4>

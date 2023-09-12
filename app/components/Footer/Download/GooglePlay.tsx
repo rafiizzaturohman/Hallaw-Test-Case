@@ -14,7 +14,7 @@ const DownlaodGooglePlay: React.FC = () => {
       />
 
       <div className="text-white md:-space-y-1">
-        <p className="uppercase text-xs">get it on</p>
+        <p className="uppercase text-[9px]">get it on</p>
         <h4 className="capitalize font-bold text-xs md:text-base">
           google play
         </h4>
