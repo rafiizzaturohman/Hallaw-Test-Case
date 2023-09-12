@@ -24,7 +24,7 @@ const Menu: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute z-10 rounded-xl shadow-md w-[60vw] sm:w-[50vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
+        <div className="absolute z-10 rounded-xl shadow-md w-[60vw] sm:w-[50vw] md:w-3/4 bg-white overflow-hidden right-0 top-20 text-sm">
           <div className="flex flex-col cursor-pointer">
             <MenuItem label="Beranda" id={"#"} onClick={toggleOpen} />
             <MenuItem label="Layanan" id={"#layanan"} onClick={toggleOpen} />
