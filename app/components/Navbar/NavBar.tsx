@@ -13,7 +13,7 @@ const Navbar = () => {
               <img src="/icons/HallawIcons.png" alt="Hallaw" />
             </div>
 
-            <div className="w-1/2 md:w-3/4 flex flex-row justify-end items-center">
+            <div className="w-1/2 base:w-3/4 flex flex-row justify-end items-center">
               <div className="hidden md:flex md:flex-row md:justify-between w-full">
                 <NavLink />
               </div>

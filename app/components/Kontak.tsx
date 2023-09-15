@@ -2,12 +2,7 @@
 
 import Link from "next/link";
 import React, { useRef } from "react";
-import {
-  FaAngleLeft,
-  FaAngleRight,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import KontakCard from "./Card/KontakCard";
 
@@ -169,7 +164,7 @@ const Kontak: React.FC = () => {
               </div>
             </div>
             {/* base:w-3/4 */}
-            <div className="relative flex flex-row justify-center max-w-7xl bg-white shadow-md rounded-3xl p-3 w-full base:w-3/4 md:w-[698px] lg:h-[318px] items-center">
+            <div className="relative flex flex-row justify-center max-w-7xl bg-white shadow-md rounded-3xl p-2 w-full base:w-3/4 md:w-[698px] lg:h-[318px] items-center">
               <div className="absolute -left-5 md:-left-5">
                 <SlickPrevArrow />
               </div>
