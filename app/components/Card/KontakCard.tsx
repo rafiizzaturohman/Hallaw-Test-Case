@@ -16,9 +16,11 @@ const KontakCard: React.FC<KontakCardProps> = ({ name, phone }) => {
             className="w-8 h-8 md:w-12 md:h-12"
           />
           <div>
-            <p className="font-semibold text-xs md:text-lg">{phone}</p>
+            <p className="font-semibold text-[8px] xs:text-xs md:text-lg">
+              {phone}
+            </p>
 
-            <p className="capitalize text-[#636772] text-xs md:text-lg">
+            <p className="capitalize text-[#636772] text-[8px] xs:text-xs md:text-lg">
               {name}
             </p>
           </div>
