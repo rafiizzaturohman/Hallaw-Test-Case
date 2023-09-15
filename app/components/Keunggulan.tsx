@@ -53,7 +53,7 @@ const Keunggulan: React.FC = () => {
               <img
                 src="/icons/mascot/mascot.png"
                 alt="Mascot"
-                className="w-[237px] h-[279px] sm:w-[417px] sm:h-[479px]"
+                className="w-[237px] h-[279px] base:w-[417px] base:h-[479px]"
               />
             </div>
 

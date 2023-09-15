@@ -16,11 +16,11 @@ const config: Config = {
       },
     },
     screens: {
-      'xxs': '360px',
-      'xs': '400px',
+      'xxs': '300px',
+      'xs': '480px',
       'sm': '600px',
-      'base': '820px',
-      'md': '1220px',
+      'base': '800px',
+      'md': '1080px',
       'lg': '1280px',
       'xl': '1440px',
     }
