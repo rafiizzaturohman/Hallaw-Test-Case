@@ -9,7 +9,7 @@ const Download = () => {
             <div className="relative">
               <img src="/back.png" alt="background" />
 
-              <div className="absolute -top-7 xs:-top-14 px-6 sm:-top-10 base:-top-8 md:-top-16 xs:px-12 base:px-[70px] flex flex-row items-center space-x-6 base:space-x-24">
+              <div className="absolute -top-8 xs:-top-14 px-6 sm:-top-16 base:-top-8 md:-top-16 xs:px-12 base:px-[70px] flex flex-row items-center justify-evenly space-x-6 base:space-x-24">
                 <div className="text-white space-y-1 xs:space-y-2 base:space-y-7">
                   <div className=" md:space-y-1">
                     <h4 className="font-black text-[9px] sm:text-[14px] xs:text-[14px] base:text-xl lg:text-3xl font-['Martel'] md:w-[441px]">
@@ -67,7 +67,7 @@ const Download = () => {
                 <img
                   src="/images/phoness.png"
                   alt="Apps"
-                  className="w-32 xs:w-56 sm:w-56 base:w-[20rem] base:h-[22rem] md:w-[386px] md:h-[466px]"
+                  className="w-32 xs:w-56 sm:w-64 base:w-[20rem] base:h-[22rem] md:w-[386px] md:h-[466px]"
                 />
               </div>
             </div>
